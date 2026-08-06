@@ -59,4 +59,4 @@ xcodebuild build \
   -destination 'platform=macOS'
 ```
 
-このアプリは個人利用・直接配布向けです。App Storeへの公開を前提としていません。
+このアプリは個人利用・直接配布向けです。App Storeへの公開を前提としていません。`Beta`構成は署名なし／adhoc署名のローカル配置でも埋め込みFrameworkを読み込めるよう、Hardened Runtimeを無効にしています。他のMacへ配布する場合はDeveloper ID署名とNotarizationを設定した配布専用構成を利用してください。
