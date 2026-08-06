@@ -1,0 +1,125 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* AgentMeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* AgentMeterApp.swift */; };
+		A10000000000000000000002 /* AgentMeterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* AgentMeterCore.framework */; };
+		A10000000000000000000003 /* UsageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* UsageProvider.swift */; };
+		A10000000000000000000004 /* AppServerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* AppServerProvider.swift */; };
+		A10000000000000000000005 /* DiagnosticRedactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* DiagnosticRedactor.swift */; };
+		A10000000000000000000006 /* AgentMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* AgentMeterTests.swift */; };
+		A10000000000000000000007 /* AgentMeterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* AgentMeterCore.framework */; };
+		A10000000000000000000008 /* AgentMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* AgentMeterUITests.swift */; };
+		A10000000000000000000009 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* Localizable.xcstrings */; };
+		A10000000000000000000010 /* AgentMeterCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* AgentMeterCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A10000000000000000000011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* Assets.xcassets */; };
+		A10000000000000000000012 /* AntigravityCLIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* AntigravityCLIProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A30000000000000000000005 /* Embed Frameworks */ = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 10; files = (A10000000000000000000010 /* AgentMeterCore.framework in Embed Frameworks */, ); name = "Embed Frameworks"; runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* AgentMeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AgentMeterApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* UsageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageProvider.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* AppServerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerProvider.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* DiagnosticRedactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticRedactor.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* AgentMeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentMeterTests.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* AgentMeterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentMeterUITests.swift; sourceTree = "<group>"; };
+		A20000000000000000000007 /* AgentMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = AgentMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000008 /* AgentMeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = AgentMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000009 /* AgentMeterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = AgentMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000010 /* AgentMeterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AgentMeterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000011 /* AgentMeter-Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AgentMeter-Debug.entitlements"; sourceTree = "<group>"; };
+		A20000000000000000000012 /* AgentMeter-Beta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AgentMeter-Beta.entitlements"; sourceTree = "<group>"; };
+		A20000000000000000000013 /* AgentMeter-AppStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AgentMeter-AppStore.entitlements"; sourceTree = "<group>"; };
+		A20000000000000000000014 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		A20000000000000000000015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20000000000000000000016 /* AntigravityCLIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntigravityCLIProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000002 /* AgentMeterCore.framework in Frameworks */, ); runOnlyForDeploymentPostprocessing = 0; };
+		A30000000000000000000002 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000007 /* AgentMeterCore.framework in Frameworks */, ); runOnlyForDeploymentPostprocessing = 0; };
+		A30000000000000000000003 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {isa = PBXGroup; children = (A40000000000000000000002 /* AgentMeter */, A40000000000000000000003 /* Core */, A40000000000000000000004 /* AgentMeterTests */, A40000000000000000000005 /* AgentMeterUITests */, A40000000000000000000006 /* Products */, ); sourceTree = "<group>"; };
+		A40000000000000000000002 /* AgentMeter */ = {isa = PBXGroup; children = (A20000000000000000000001 /* AgentMeterApp.swift */, A20000000000000000000014 /* Localizable.xcstrings */, A20000000000000000000015 /* Assets.xcassets */, A40000000000000000000007 /* Supporting */, ); path = AgentMeter; sourceTree = "<group>"; };
+		A40000000000000000000003 /* Core */ = {isa = PBXGroup; children = (A20000000000000000000002 /* UsageProvider.swift */, A20000000000000000000003 /* AppServerProvider.swift */, A20000000000000000000016 /* AntigravityCLIProvider.swift */, A20000000000000000000004 /* DiagnosticRedactor.swift */, ); path = Sources/AgentMeterCore; sourceTree = SOURCE_ROOT; };
+		A40000000000000000000004 /* AgentMeterTests */ = {isa = PBXGroup; children = (A20000000000000000000005 /* AgentMeterTests.swift */, ); path = AgentMeterTests; sourceTree = "<group>"; };
+		A40000000000000000000005 /* AgentMeterUITests */ = {isa = PBXGroup; children = (A20000000000000000000006 /* AgentMeterUITests.swift */, ); path = AgentMeterUITests; sourceTree = "<group>"; };
+		A40000000000000000000006 /* Products */ = {isa = PBXGroup; children = (A20000000000000000000007 /* AgentMeter.app */, A20000000000000000000010 /* AgentMeterCore.framework */, A20000000000000000000008 /* AgentMeterTests.xctest */, A20000000000000000000009 /* AgentMeterUITests.xctest */, ); name = Products; sourceTree = "<group>"; };
+		A40000000000000000000007 /* Supporting */ = {isa = PBXGroup; children = (A20000000000000000000011 /* AgentMeter-Debug.entitlements */, A20000000000000000000012 /* AgentMeter-Beta.entitlements */, A20000000000000000000013 /* AgentMeter-AppStore.entitlements */, ); path = Supporting; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* AgentMeter */ = {isa = PBXNativeTarget; buildConfigurationList = A70000000000000000000002 /* Build configuration list for PBXNativeTarget "AgentMeter" */; buildPhases = (A30000000000000000000001 /* Frameworks */, A80000000000000000000001 /* Sources */, A30000000000000000000004 /* Resources */, A30000000000000000000005 /* Embed Frameworks */, ); buildRules = (); dependencies = (A90000000000000000000001 /* PBXTargetDependency */, ); name = AgentMeter; productName = AgentMeter; productReference = A20000000000000000000007 /* AgentMeter.app */; productType = "com.apple.product-type.application"; };
+		A50000000000000000000002 /* AgentMeterCore */ = {isa = PBXNativeTarget; buildConfigurationList = A70000000000000000000003 /* Build configuration list for PBXNativeTarget "AgentMeterCore" */; buildPhases = (A80000000000000000000002 /* Sources */, ); buildRules = (); dependencies = (); name = AgentMeterCore; productName = AgentMeterCore; productReference = A20000000000000000000010 /* AgentMeterCore.framework */; productType = "com.apple.product-type.framework"; };
+		A50000000000000000000003 /* AgentMeterTests */ = {isa = PBXNativeTarget; buildConfigurationList = A70000000000000000000004 /* Build configuration list for PBXNativeTarget "AgentMeterTests" */; buildPhases = (A30000000000000000000002 /* Frameworks */, A80000000000000000000003 /* Sources */, ); buildRules = (); dependencies = (A90000000000000000000002 /* PBXTargetDependency */, A90000000000000000000004 /* PBXTargetDependency */, ); name = AgentMeterTests; productName = AgentMeterTests; productReference = A20000000000000000000008 /* AgentMeterTests.xctest */; productType = "com.apple.product-type.bundle.unit-test"; };
+		A50000000000000000000004 /* AgentMeterUITests */ = {isa = PBXNativeTarget; buildConfigurationList = A70000000000000000000005 /* Build configuration list for PBXNativeTarget "AgentMeterUITests" */; buildPhases = (A30000000000000000000003 /* Frameworks */, A80000000000000000000004 /* Sources */, ); buildRules = (); dependencies = (A90000000000000000000003 /* PBXTargetDependency */, ); name = AgentMeterUITests; productName = AgentMeterUITests; productReference = A20000000000000000000009 /* AgentMeterUITests.xctest */; productType = "com.apple.product-type.bundle.ui-testing"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A60000000000000000000001 /* Project object */ = {isa = PBXProject; attributes = { LastSwiftUpdateCheck = 2600; LastUpgradeCheck = 2600; TargetAttributes = { A50000000000000000000001 = { CreatedOnToolsVersion = 26.0; }; A50000000000000000000002 = { CreatedOnToolsVersion = 26.0; }; A50000000000000000000003 = { CreatedOnToolsVersion = 26.0; TestTargetID = A50000000000000000000001; }; A50000000000000000000004 = { CreatedOnToolsVersion = 26.0; TestTargetID = A50000000000000000000001; }; }; }; buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXProject "AgentMeter" */; compatibilityVersion = "Xcode 16.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, ja, Base, ); mainGroup = A40000000000000000000001; productRefGroup = A40000000000000000000006 /* Products */; projectDirPath = ""; projectRoot = ""; targets = (A50000000000000000000001 /* AgentMeter */, A50000000000000000000002 /* AgentMeterCore */, A50000000000000000000003 /* AgentMeterTests */, A50000000000000000000004 /* AgentMeterUITests */, ); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A30000000000000000000004 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000009 /* Localizable.xcstrings in Resources */, A10000000000000000000011 /* Assets.xcassets in Resources */, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A80000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* AgentMeterApp.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
+		A80000000000000000000002 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000003 /* UsageProvider.swift in Sources */, A10000000000000000000004 /* AppServerProvider.swift in Sources */, A10000000000000000000012 /* AntigravityCLIProvider.swift in Sources */, A10000000000000000000005 /* DiagnosticRedactor.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
+		A80000000000000000000003 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000006 /* AgentMeterTests.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
+		A80000000000000000000004 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000008 /* AgentMeterUITests.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A90000000000000000000001 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = A50000000000000000000002 /* AgentMeterCore */; targetProxy = AA00000000000000000000001 /* PBXContainerItemProxy */; };
+		A90000000000000000000002 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = A50000000000000000000002 /* AgentMeterCore */; targetProxy = AA00000000000000000000002 /* PBXContainerItemProxy */; };
+		A90000000000000000000003 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = A50000000000000000000001 /* AgentMeter */; targetProxy = AA00000000000000000000003 /* PBXContainerItemProxy */; };
+		A90000000000000000000004 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = A50000000000000000000001 /* AgentMeter */; targetProxy = AA00000000000000000000004 /* PBXContainerItemProxy */; };
+/* End PBXTargetDependency section */
+
+/* Begin PBXContainerItemProxy section */
+		AA00000000000000000000001 /* PBXContainerItemProxy */ = {isa = PBXContainerItemProxy; containerPortal = A60000000000000000000001 /* Project object */; proxyType = 1; remoteGlobalIDString = A50000000000000000000002; remoteInfo = AgentMeterCore; };
+		AA00000000000000000000002 /* PBXContainerItemProxy */ = {isa = PBXContainerItemProxy; containerPortal = A60000000000000000000001 /* Project object */; proxyType = 1; remoteGlobalIDString = A50000000000000000000002; remoteInfo = AgentMeterCore; };
+		AA00000000000000000000003 /* PBXContainerItemProxy */ = {isa = PBXContainerItemProxy; containerPortal = A60000000000000000000001 /* Project object */; proxyType = 1; remoteGlobalIDString = A50000000000000000000001; remoteInfo = AgentMeter; };
+		AA00000000000000000000004 /* PBXContainerItemProxy */ = {isa = PBXContainerItemProxy; containerPortal = A60000000000000000000001 /* Project object */; proxyType = 1; remoteGlobalIDString = A50000000000000000000001; remoteInfo = AgentMeter; };
+/* End PBXContainerItemProxy section */
+
+/* Begin XCBuildConfiguration section */
+		AB00000000000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SWIFT_VERSION = 6.0; }; name = Debug; };
+		AB00000000000000000000002 /* Beta */ = {isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SWIFT_VERSION = 6.0; }; name = Beta; };
+		AB00000000000000000000003 /* AppStore */ = {isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SWIFT_VERSION = 6.0; }; name = AppStore; };
+		AB00000000000000000000004 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = AgentMeter/Supporting/AgentMeter-Debug.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; ENABLE_HARDENED_RUNTIME = NO; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Agent Meter"; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools"; INFOPLIST_KEY_LSUIElement = YES; LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks"; MARKETING_VERSION = 0.2.0; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Debug; };
+		AB00000000000000000000005 /* Beta */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = AgentMeter/Supporting/AgentMeter-Beta.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Agent Meter"; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools"; INFOPLIST_KEY_LSUIElement = YES; LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks"; MARKETING_VERSION = 0.2.0; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Beta; };
+		AB00000000000000000000006 /* AppStore */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = AgentMeter/Supporting/AgentMeter-AppStore.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Agent Meter"; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools"; INFOPLIST_KEY_LSUIElement = YES; LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks"; MARKETING_VERSION = 0.2.0; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = AppStore; };
+		AB00000000000000000000007 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { DEFINES_MODULE = YES; DYLIB_INSTALL_NAME_BASE = "@rpath"; GENERATE_INFOPLIST_FILE = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter.core; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_VERSION = 6.0; }; name = Debug; };
+		AB00000000000000000000008 /* Beta */ = {isa = XCBuildConfiguration; buildSettings = { DEFINES_MODULE = YES; DYLIB_INSTALL_NAME_BASE = "@rpath"; GENERATE_INFOPLIST_FILE = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter.core; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_VERSION = 6.0; }; name = Beta; };
+		AB00000000000000000000009 /* AppStore */ = {isa = XCBuildConfiguration; buildSettings = { DEFINES_MODULE = YES; DYLIB_INSTALL_NAME_BASE = "@rpath"; GENERATE_INFOPLIST_FILE = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter.core; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_VERSION = 6.0; }; name = AppStore; };
+		AB00000000000000000000010 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter.tests; PRODUCT_MODULE_NAME = AgentMeterTests; PRODUCT_NAME = "$(TARGET_NAME)"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgentMeter.app/Contents/MacOS/AgentMeter"; }; name = Debug; };
+		AB00000000000000000000011 /* Beta */ = {isa = XCBuildConfiguration; buildSettings = { BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter.tests; PRODUCT_MODULE_NAME = AgentMeterTests; PRODUCT_NAME = "$(TARGET_NAME)"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgentMeter.app/Contents/MacOS/AgentMeter"; }; name = Beta; };
+		AB00000000000000000000012 /* AppStore */ = {isa = XCBuildConfiguration; buildSettings = { BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter.tests; PRODUCT_MODULE_NAME = AgentMeterTests; PRODUCT_NAME = "$(TARGET_NAME)"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgentMeter.app/Contents/MacOS/AgentMeter"; }; name = AppStore; };
+		AB00000000000000000000013 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter.uitests; PRODUCT_MODULE_NAME = AgentMeterUITests; PRODUCT_NAME = "$(TARGET_NAME)"; TEST_TARGET_NAME = AgentMeter; }; name = Debug; };
+		AB00000000000000000000014 /* Beta */ = {isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter.uitests; PRODUCT_MODULE_NAME = AgentMeterUITests; PRODUCT_NAME = "$(TARGET_NAME)"; TEST_TARGET_NAME = AgentMeter; }; name = Beta; };
+		AB00000000000000000000015 /* AppStore */ = {isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = me.furuta.agentmeter.uitests; PRODUCT_MODULE_NAME = AgentMeterUITests; PRODUCT_NAME = "$(TARGET_NAME)"; TEST_TARGET_NAME = AgentMeter; }; name = AppStore; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70000000000000000000001 /* Build configuration list for PBXProject "AgentMeter" */ = {isa = XCConfigurationList; buildConfigurations = (AB00000000000000000000001 /* Debug */, AB00000000000000000000002 /* Beta */, AB00000000000000000000003 /* AppStore */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+		A70000000000000000000002 /* Build configuration list for PBXNativeTarget "AgentMeter" */ = {isa = XCConfigurationList; buildConfigurations = (AB00000000000000000000004 /* Debug */, AB00000000000000000000005 /* Beta */, AB00000000000000000000006 /* AppStore */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+		A70000000000000000000003 /* Build configuration list for PBXNativeTarget "AgentMeterCore" */ = {isa = XCConfigurationList; buildConfigurations = (AB00000000000000000000007 /* Debug */, AB00000000000000000000008 /* Beta */, AB00000000000000000000009 /* AppStore */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+		A70000000000000000000004 /* Build configuration list for PBXNativeTarget "AgentMeterTests" */ = {isa = XCConfigurationList; buildConfigurations = (AB00000000000000000000010 /* Debug */, AB00000000000000000000011 /* Beta */, AB00000000000000000000012 /* AppStore */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+		A70000000000000000000005 /* Build configuration list for PBXNativeTarget "AgentMeterUITests" */ = {isa = XCConfigurationList; buildConfigurations = (AB00000000000000000000013 /* Debug */, AB00000000000000000000014 /* Beta */, AB00000000000000000000015 /* AppStore */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A60000000000000000000001 /* Project object */;
+}

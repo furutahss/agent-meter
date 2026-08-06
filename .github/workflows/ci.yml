@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift package tests
+        run: swift test
+      - name: Xcode Debug build and unit tests
+        run: >-
+          xcodebuild test -project CodexAmount.xcodeproj -scheme CodexAmount
+          -configuration Debug -destination 'platform=macOS'
+      - name: Xcode Beta build
+        run: >-
+          xcodebuild build -project CodexAmount.xcodeproj -scheme CodexAmount
+          -configuration Beta -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO
+      - name: Xcode App Store build
+        run: >-
+          xcodebuild build -project CodexAmount.xcodeproj -scheme CodexAmount
+          -configuration AppStore -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO
