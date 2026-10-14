@@ -1,6 +1,6 @@
 # Agent Meter
 
-Codex と Antigravity の残り使用量を、macOS のメニューバーでまとめて確認するネイティブアプリです。Xcode でそのままビルドでき、今後ほかのエージェントCLIを追加しやすい provider 構成になっています。
+Codex、Antigravity、Claude Code、Grok の残り使用量を、macOS のメニューバーでまとめて確認するネイティブアプリです。Xcode でそのままビルドでき、今後ほかのエージェントCLIを追加しやすい provider 構成になっています。
 
 ## 現在の対応
 
@@ -8,6 +8,8 @@ Codex と Antigravity の残り使用量を、macOS のメニューバーでま�
 |---|---|---|
 | Codex | `codex app-server --stdio` | 主／第2制限、複数limit、残量、リセット時刻、プラン、クレジット |
 | Antigravity | `agy` の対話的 `/usage` | Gemini系・Claude/GPT系それぞれの週次／5時間残量と更新時刻 |
+| Claude Code | `claude` の対話的 `/usage` | セッション（5時間）・週次残量、リセット時刻、プラン、クレジット |
+| Grok | `grok agent --no-leader stdio` の請求情報 | 現在期間の使用率、リセット時刻、プラン、前払いクレジット、従量課金 |
 
 メニューバーでは、左端にAgent Meterのアプリアイコン、その右側に「小さいエージェントアイコン＋緑色の残量バー」を縦2段で表示します。3番目以降のエージェントは同じ2段構成のまま右側へ列を追加するため、頭文字の重複や横幅の増えすぎを避けられます。クリックすると、5時間枠・週次枠・残量・リセット日時など、取得できた全制限をエージェント別カードで確認できます。
 
@@ -22,7 +24,7 @@ Codex と Antigravity の残り使用量を、macOS のメニューバーでま�
 
 ## 起動
 
-前提は macOS 14 以降、Xcode、ログイン済みの `codex` と `agy` です。
+前提は macOS 14 以降、Xcode、ログイン済みの `codex`、`agy`、`claude`、`grok` です。
 
 1. `AgentMeter.xcodeproj` を Xcode で開く。
 2. `AgentMeter` scheme、`Debug` configurationを選ぶ。
@@ -40,13 +42,13 @@ NSStatusItem / SwiftUI
 UsageViewModel
         |
 UsageProvider
-   |                 |
-AppServerProvider   AntigravityCLIProvider
-   |                 |
-codex app-server    agy /usage (PTY)
+   |                 |                      |                 |
+AppServerProvider   AntigravityCLIProvider  ClaudeCLIProvider GrokCLIProvider
+   |                 |                      |                 |
+codex app-server    agy /usage (PTY)        claude /usage     grok agent billing
 ```
 
-AntigravityのCLI画面は安定APIではないため、CLI更新で表示形式が変わった場合はAntigravityカードだけを「非対応」とし、Codex表示とキャッシュは継続します。
+AntigravityやClaude CodeのCLI画面は安定APIではないため、CLI更新で表示形式が変わった場合は該当エージェントカードだけを「非対応」とし、他のエージェント表示とキャッシュは継続します。
 
 ## 検証
 

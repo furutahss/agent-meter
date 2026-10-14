@@ -133,9 +133,13 @@ final class UsageViewModel: ObservableObject {
 
         let codexURL = Self.findCLI(named: "codex")
         let antigravityURL = Self.findCLI(named: "agy")
+        let claudeURL = Self.findCLI(named: "claude")
+        let grokURL = Self.findCLI(named: "grok")
         agents = [
             AgentDisplay(id: "codex", name: "Codex", menuName: "Codex", symbol: "chevron.left.forwardslash.chevron.right", cliName: "codex", state: codexURL == nil ? .error("Codex CLI が見つかりません。") : .loading, isInstalled: codexURL != nil),
             AgentDisplay(id: "antigravity", name: "Antigravity", menuName: "AGY", symbol: "sparkles", cliName: "agy", state: antigravityURL == nil ? .error("Antigravity CLI（agy）が見つかりません。") : .loading, isInstalled: antigravityURL != nil),
+            AgentDisplay(id: "claude", name: "Claude Code", menuName: "Claude", symbol: "asterisk", cliName: "claude", state: claudeURL == nil ? .error("Claude Code CLI（claude）が見つかりません。") : .loading, isInstalled: claudeURL != nil),
+            AgentDisplay(id: "grok", name: "Grok", menuName: "Grok", symbol: "g.circle", cliName: "grok", state: grokURL == nil ? .error("Grok CLI（grok）が見つかりません。") : .loading, isInstalled: grokURL != nil),
         ]
 
         let support = Self.applicationSupportURL()
@@ -144,6 +148,18 @@ final class UsageViewModel: ObservableObject {
             providers["antigravity"] = AntigravityCLIProvider(
                 executableURL: antigravityURL,
                 workingDirectoryURL: support.appendingPathComponent("AntigravityWorkspace", isDirectory: true)
+            )
+        }
+        if let claudeURL {
+            providers["claude"] = ClaudeCLIProvider(
+                executableURL: claudeURL,
+                workingDirectoryURL: support.appendingPathComponent("ClaudeWorkspace", isDirectory: true)
+            )
+        }
+        if let grokURL {
+            providers["grok"] = GrokCLIProvider(
+                executableURL: grokURL,
+                workingDirectoryURL: support.appendingPathComponent("GrokWorkspace", isDirectory: true)
             )
         }
         for agent in agents {
@@ -312,8 +328,10 @@ final class UsageViewModel: ObservableObject {
     private static func findCLI(named name: String) -> URL? {
         let home = FileManager.default.homeDirectoryForCurrentUser.path
         let pathEntries = (ProcessInfo.processInfo.environment["PATH"] ?? "").split(separator: ":").map(String.init)
+        var extra = ["/opt/homebrew/bin/\(name)", "/usr/local/bin/\(name)", "\(home)/.local/bin/\(name)"]
+        if name == "grok" { extra.append("\(home)/.grok/bin/\(name)") }
         let candidates = pathEntries.map { URL(fileURLWithPath: $0).appendingPathComponent(name) }
-            + ["/opt/homebrew/bin/\(name)", "/usr/local/bin/\(name)", "\(home)/.local/bin/\(name)"].map(URL.init(fileURLWithPath:))
+            + extra.map(URL.init(fileURLWithPath:))
         return candidates.first { FileManager.default.isExecutableFile(atPath: $0.path) }
     }
 

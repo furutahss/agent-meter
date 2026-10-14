@@ -18,6 +18,9 @@
 		A10000000000000000000010 /* AgentMeterCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* AgentMeterCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A10000000000000000000011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* Assets.xcassets */; };
 		A10000000000000000000012 /* AntigravityCLIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* AntigravityCLIProvider.swift */; };
+		A10000000000000000000013 /* ClaudeCLIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* ClaudeCLIProvider.swift */; };
+		A10000000000000000000014 /* PseudoTerminalProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000018 /* PseudoTerminalProcess.swift */; };
+		A10000000000000000000016 /* GrokCLIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000019 /* GrokCLIProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +44,9 @@
 		A20000000000000000000014 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		A20000000000000000000015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A20000000000000000000016 /* AntigravityCLIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntigravityCLIProvider.swift; sourceTree = "<group>"; };
+		A20000000000000000000017 /* ClaudeCLIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeCLIProvider.swift; sourceTree = "<group>"; };
+		A20000000000000000000018 /* PseudoTerminalProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoTerminalProcess.swift; sourceTree = "<group>"; };
+		A20000000000000000000019 /* GrokCLIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrokCLIProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,7 @@
 /* Begin PBXGroup section */
 		A40000000000000000000001 = {isa = PBXGroup; children = (A40000000000000000000002 /* AgentMeter */, A40000000000000000000003 /* Core */, A40000000000000000000004 /* AgentMeterTests */, A40000000000000000000005 /* AgentMeterUITests */, A40000000000000000000006 /* Products */, ); sourceTree = "<group>"; };
 		A40000000000000000000002 /* AgentMeter */ = {isa = PBXGroup; children = (A20000000000000000000001 /* AgentMeterApp.swift */, A20000000000000000000014 /* Localizable.xcstrings */, A20000000000000000000015 /* Assets.xcassets */, A40000000000000000000007 /* Supporting */, ); path = AgentMeter; sourceTree = "<group>"; };
-		A40000000000000000000003 /* Core */ = {isa = PBXGroup; children = (A20000000000000000000002 /* UsageProvider.swift */, A20000000000000000000003 /* AppServerProvider.swift */, A20000000000000000000016 /* AntigravityCLIProvider.swift */, A20000000000000000000004 /* DiagnosticRedactor.swift */, ); path = Sources/AgentMeterCore; sourceTree = SOURCE_ROOT; };
+		A40000000000000000000003 /* Core */ = {isa = PBXGroup; children = (A20000000000000000000002 /* UsageProvider.swift */, A20000000000000000000003 /* AppServerProvider.swift */, A20000000000000000000016 /* AntigravityCLIProvider.swift */, A20000000000000000000017 /* ClaudeCLIProvider.swift */, A20000000000000000000019 /* GrokCLIProvider.swift */, A20000000000000000000018 /* PseudoTerminalProcess.swift */, A20000000000000000000004 /* DiagnosticRedactor.swift */, ); path = Sources/AgentMeterCore; sourceTree = SOURCE_ROOT; };
 		A40000000000000000000004 /* AgentMeterTests */ = {isa = PBXGroup; children = (A20000000000000000000005 /* AgentMeterTests.swift */, ); path = AgentMeterTests; sourceTree = "<group>"; };
 		A40000000000000000000005 /* AgentMeterUITests */ = {isa = PBXGroup; children = (A20000000000000000000006 /* AgentMeterUITests.swift */, ); path = AgentMeterUITests; sourceTree = "<group>"; };
 		A40000000000000000000006 /* Products */ = {isa = PBXGroup; children = (A20000000000000000000007 /* AgentMeter.app */, A20000000000000000000010 /* AgentMeterCore.framework */, A20000000000000000000008 /* AgentMeterTests.xctest */, A20000000000000000000009 /* AgentMeterUITests.xctest */, ); name = Products; sourceTree = "<group>"; };
@@ -76,7 +82,7 @@
 
 /* Begin PBXSourcesBuildPhase section */
 		A80000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* AgentMeterApp.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
-		A80000000000000000000002 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000003 /* UsageProvider.swift in Sources */, A10000000000000000000004 /* AppServerProvider.swift in Sources */, A10000000000000000000012 /* AntigravityCLIProvider.swift in Sources */, A10000000000000000000005 /* DiagnosticRedactor.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
+		A80000000000000000000002 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000003 /* UsageProvider.swift in Sources */, A10000000000000000000004 /* AppServerProvider.swift in Sources */, A10000000000000000000012 /* AntigravityCLIProvider.swift in Sources */, A10000000000000000000013 /* ClaudeCLIProvider.swift in Sources */, A10000000000000000000016 /* GrokCLIProvider.swift in Sources */, A10000000000000000000014 /* PseudoTerminalProcess.swift in Sources */, A10000000000000000000005 /* DiagnosticRedactor.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
 		A80000000000000000000003 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000006 /* AgentMeterTests.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
 		A80000000000000000000004 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000008 /* AgentMeterUITests.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
